@@ -3,6 +3,7 @@ import java.net.*;
 import java.util.*;
 import java.util.concurrent.*;
 
+import Com.Hlophe.Connection.CreateDatabase;
 import Com.Hlophe.OrphanageHome.BookVisit;
 import Com.Hlophe.OrphanageHome.ChildrenAvailable;
 import Com.Hlophe.OrphanageHome.Donations;
@@ -14,6 +15,9 @@ public class Main {
     
     public static void main(String[] args) {
         try {
+        	CreateDatabase _CreateDatabase = new CreateDatabase();
+        	_CreateDatabase.writeQueries();
+        	
             ServerSocket serverSocket = new ServerSocket(PORT);
             System.out.println("Running");
             
