@@ -7,6 +7,7 @@ import Com.Hlophe.Connection.CreateDatabase;
 import Com.Hlophe.OrphanageHome.BookVisit;
 import Com.Hlophe.OrphanageHome.ChildrenAvailable;
 import Com.Hlophe.OrphanageHome.Donations;
+import Com.Hlophe.Authentication.*;
 
 public class Main {
     private static final int PORT = 8080;
@@ -112,7 +113,11 @@ public class Main {
                         break;
                         
                     case "POST":
-                        if (endpoint.equals("/donations")) {
+						if (endpoint.equals("/auth/login")) {
+							String loginResponse = AuthController.login(body);
+							return createResponse(200, "OK", loginResponse, true);
+							}
+                        else if (endpoint.equals("/donations")) {
                             String donationResponse = Donations.handlePostRequest(body);
                             int statusCode = donationResponse.contains("\"success\":true") ? 201 : 400;
                             return createResponse(statusCode, 

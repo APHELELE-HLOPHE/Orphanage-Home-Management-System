@@ -5,6 +5,7 @@ A full-stack application to manage the orphanage home. Users can view children i
 ## Features
 
 ### Frontend (Flutter)
+- Sign Up/ Login
 - View available children
 - Book a visit to the orphanage
 - Make donations
@@ -12,7 +13,7 @@ A full-stack application to manage the orphanage home. Users can view children i
 ### Backend (Java)
 - REST API endpoints for frontend
 - Database management using MySQL
-- Handle donations, visits, and children records
+- Handle loging in, donations, visits, and children records
 
 ## Prerequisites
 - Java 17+
@@ -31,8 +32,9 @@ A full-stack application to manage the orphanage home. Users can view children i
 2. on the terminal, run the command: flutter run -d chrome
 
 ### Screenshots
+![Login Screen](assets/Login.png)
 ![Home Screen](assets/home.png)
-![Children Screen](assets/home.png)
-![Donation Screen](assets/home.png)
-![Visit Screen](assets/home.png)
+![Children Screen](assets/Children.png)
+![Donation Screen](assets/Donation.png)
+![Visit Screen](assets/Visit.png)
 
