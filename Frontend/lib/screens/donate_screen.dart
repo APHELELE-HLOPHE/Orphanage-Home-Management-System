@@ -34,12 +34,10 @@ class _DonateScreenState extends State<DonateScreen> {
       final result = await ApiService.makeDonation(request);
 
       if (result['success'] == true) {
-        // Clear form
         _itemNameController.clear();
         _quantityController.clear();
         _descriptionController.clear();
 
-        // Show success message
         if (!mounted) return;
         _showSuccessDialog(result['message']);
       } else {
@@ -74,7 +72,7 @@ class _DonateScreenState extends State<DonateScreen> {
           TextButton(
             onPressed: () {
               Navigator.pop(context);
-              Navigator.pop(context); // Go back to home
+              Navigator.pop(context);
             },
             child: const Text('OK'),
           ),
