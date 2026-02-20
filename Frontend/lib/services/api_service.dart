@@ -18,10 +18,7 @@ class ApiService {
       );
 
       if (response.statusCode == 200) {
-        // Parse JSON response
         final List<dynamic> jsonList = json.decode(response.body);
-        
-        // Convert to Children objects
         final List<Children> children = [];
         for (var json in jsonList) {
           children.add(Children.fromJson(json));
