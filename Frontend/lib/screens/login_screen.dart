@@ -78,7 +78,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
               const SizedBox(height: 20),
 
-              /// 🏠 TITLE
               const Text(
                 'Ubuntu Mabande Orphanage Home',
                 style: TextStyle(
