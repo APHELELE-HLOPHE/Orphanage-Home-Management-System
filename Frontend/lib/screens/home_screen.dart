@@ -5,8 +5,6 @@ import 'donate_screen.dart';
 import 'visit_screen.dart';
 import 'login_screen.dart';
 
-
-
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -68,8 +66,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 crossAxisSpacing: 20,
                 mainAxisSpacing: 20,
                 children: [
-
-                  /// PUBLIC
                   _buildMenuCard(
                     context,
                     Icons.child_care,
@@ -82,8 +78,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
-
-                  /// PROTECTED
                   _buildMenuCard(
                     context,
                     Icons.card_giftcard,
